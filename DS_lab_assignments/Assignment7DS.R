@@ -19,9 +19,9 @@ MARKS[,"TOTAL"] <- apply(MARKS[,1:3],1,sum)
 V1 <- MARKS[,"SUB1"]
 V2 <- MARKS[,"SUB2"]
 V3 <- MARKS[,"SUB3"]
-sprintf("Sum of V1:%f\n",lapply(V1,sum))
-sprintf("Sum of V2:%f\n",lapply(V2,sum))
-sprintf("Sum of V3:%f\n",sum(V3))
+sprintf("Sum of V1:%f",lapply(list(V1),sum))
+sprintf("Sum of V2:%f",lapply(list(V2),sum))
+sprintf("Sum of V3:%f",lapply(list(V3),sum))
 
 ## Question 3
 TOTAL_SUM = cbind(sapply(V1,sum),cbind(sapply(V2,sum),V3))
